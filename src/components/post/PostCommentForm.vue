@@ -100,7 +100,6 @@ export default {
       }
     })
     const commentForm = ref(null)
-    console.log(commentForm.value)
     const onSubmit = handleSubmit((values, { resetForm }) => {
       emit('send', values)
       resetForm()

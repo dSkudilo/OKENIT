@@ -30,7 +30,6 @@ export default {
       try {
         const { data } = await axios.post('/comments', comment)
         commit('addComment', data)
-        console.log(data)
         dispatch('setMessage', {
           value: 'Комментарий отправлен !',
           type: 'primary'
