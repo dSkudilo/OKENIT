@@ -1,4 +1,7 @@
 import { createStore } from 'vuex'
+import post from './module/post.module'
+import comment from './module/comment.module'
+import user from './module/user.module'
 
 export default createStore({
   state () {
@@ -21,5 +24,8 @@ export default createStore({
     }
   },
   modules: {
+    post,
+    comment,
+    user
   }
 })
