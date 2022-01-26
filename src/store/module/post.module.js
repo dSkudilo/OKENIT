@@ -20,10 +20,6 @@ export default {
       try {
         const { data } = await axios.get('/posts')
         commit('setPosts', data)
-        dispatch('setMessage', {
-          value: 'Посты загружены',
-          type: 'primary'
-        }, { root: true })
       } catch (error) {
         dispatch('setMessage', {
           value: error.message,

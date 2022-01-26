@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-
+import store from '../store'
 const routes = [
   {
     path: '/',
@@ -17,5 +17,10 @@ const router = createRouter({
   history: createWebHistory(),
   routes
 })
-
+router.afterEach((to, from) => {
+  store.dispatch('setMessage', {
+    value: 'Вы перешли на страницу' + to.name,
+    type: 'primary'
+  })
+})
 export default router

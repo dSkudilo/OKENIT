@@ -20,7 +20,7 @@ export default createStore({
   actions: {
     setMessage ({ commit }, message) {
       commit('setMessage', message)
-      setTimeout(() => commit('clearMessage'), 3000)
+      setTimeout(() => commit('clearMessage'), 1000)
     }
   },
   modules: {
